@@ -1,3 +1,4 @@
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMessageBox, QTableWidgetItem
 from GUI.users_ui import *
 from DB.CRUD import *
@@ -9,6 +10,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.columnas = ["Id", "Nombre", "Apellido", "Edad", "Sexo"]
         self.setupUi(self)
+        self.setWindowIcon(QIcon('/resources/img/Logo_Usuarios.png'))
         self.tblListaUsuarios.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
         self.btnGuardar.clicked.connect(self.agregar_usuario)
         self.btnBuscarID.clicked.connect(self.buscar_usuario)
@@ -102,6 +104,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 msgBox = QMessageBox()
                 msgBox.setText(crud.actualizar(nombre,apellido,edad,sexo,id))
                 msgBox.exec_()
+                self.limpiar_entradas()
                 self.tblListaUsuarios.resizeColumnsToContents()
                 self.tabla_usuarios()
         except (ValueError) as e:
@@ -119,6 +122,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 msgBox = QMessageBox()
                 msgBox.setText(crud.eliminar(id))
                 msgBox.exec_()
+                self.limpiar_entradas()
                 self.tblListaUsuarios.resizeColumnsToContents()
                 self.tabla_usuarios()
             except (ValueError) as e:

@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>510</width>
-    <height>512</height>
+    <width>521</width>
+    <height>490</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>521</width>
+    <height>490</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>521</width>
+    <height>490</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -182,7 +194,7 @@
    <widget class="QTableWidget" name="tblListaUsuarios">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>190</y>
       <width>501</width>
       <height>291</height>
@@ -201,7 +213,7 @@
    <widget class="QLineEdit" name="txtBuscarID">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>400</x>
       <y>10</y>
       <width>113</width>
       <height>23</height>
@@ -211,7 +223,7 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>320</x>
       <y>0</y>
       <width>81</width>
       <height>41</height>
@@ -233,7 +245,7 @@
    <widget class="QPushButton" name="btnBuscarID">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>430</x>
       <y>40</y>
       <width>80</width>
       <height>23</height>
@@ -259,7 +271,7 @@
    <widget class="QPushButton" name="btnEliminar">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>430</x>
       <y>70</y>
       <width>80</width>
       <height>23</height>
@@ -270,7 +282,6 @@
     </property>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAgregar">
    <property name="text">
     <string>Agregar</string>
